@@ -5,7 +5,7 @@
 //  Created by Sergio Rosendo on 8/25/26.
 //
 
-enum Metric {
+enum Metric: String, Codable {
     case duration
     case fullness
     case volume

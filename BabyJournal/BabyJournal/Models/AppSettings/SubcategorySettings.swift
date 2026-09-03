@@ -5,7 +5,15 @@
 //  Created by Sergio Rosendo on 8/27/26.
 //
 
-struct SubcategorySettings {
+import SwiftUI
+
+@Observable
+final class SubcategorySettings: Codable {
     let subcategory: Subcategory
-    let metrics: [MetricSettings]
+    let metrics: MetricSettings
+    
+    enum CodingKeys: CodingKey {
+        case subcategory
+        case metrics
+    }
 }
